@@ -5,6 +5,7 @@ namespace ShooglyPeg\DataValidator;
 use League\Flysystem\Filesystem;
 use Opis\JsonSchema\Errors\ErrorFormatter;
 use Opis\JsonSchema\Validator;
+use ShooglyPeg\DataValidator\Domain\Config;
 use ShooglyPeg\DataValidator\Domain\Exceptions\JsonDataInvalid;
 use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaNotFound;
 use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaValidationFailed;
@@ -27,18 +28,17 @@ final class DataValidator
     private Filesystem $filesystem;
 
     /**
-     * @param Validator $validator
-     * @param ErrorFormatter $errorFormatter
-     * @param Filesystem $filesystem
+     * @param Config $config
      */
-    public function __construct(
-        Validator $validator,
-        ErrorFormatter $errorFormatter,
-        Filesystem $filesystem
-    ) {
-        $this->validator      = $validator;
-        $this->errorFormatter = $errorFormatter;
-        $this->filesystem     = $filesystem;
+    public function __construct(Config $config)
+    {
+        $this->filesystem = new Filesystem($config->getAdapter());
+        $this->validator = new Validator();
+        $this->validator->resolver()->registerPrefix(
+            $config->getPrefix(),
+            $config->getSchemas()
+        );
+        $this->errorFormatter = new ErrorFormatter();
     }
 
     /**

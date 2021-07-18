@@ -8,6 +8,7 @@ use Opis\JsonSchema\Errors\ErrorFormatter;
 use Opis\JsonSchema\Validator;
 use PHPUnit\Framework\TestCase;
 use ShooglyPeg\DataValidator\DataValidator;
+use ShooglyPeg\DataValidator\Domain\Config;
 use ShooglyPeg\DataValidator\Domain\Exceptions\JsonDataInvalid;
 use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaNotFound;
 use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaValidationFailed;
@@ -25,17 +26,11 @@ final class DataValidatorTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-
-        $validator = new Validator();
-        $validator->resolver()->registerPrefix(
-            'http://www.shooglypeg.co.uk/',
-            'schemas'
-        );
-
-        $adapter    = new Local('./schemas');
-        $filesystem = new Filesystem($adapter);
-
-        $this->dataValidator = new DataValidator($validator, new ErrorFormatter(), $filesystem);
+        $this->dataValidator = new DataValidator(new Config([
+            'schemas' => 'schemas',
+            'prefix'  => 'http://www.shooglypeg.co.uk/',
+            'adapter' => new Local('./schemas')
+        ]));
     }
 
     /**
