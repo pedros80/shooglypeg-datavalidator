@@ -6,11 +6,12 @@ use League\Flysystem\Filesystem;
 use Opis\JsonSchema\Errors\ErrorFormatter;
 use Opis\JsonSchema\Validator;
 use ShooglyPeg\DataValidator\Domain\Config;
+use ShooglyPeg\DataValidator\Domain\DataValidator as DataValidatorInterface;
 use ShooglyPeg\DataValidator\Domain\Exceptions\JsonDataInvalid;
 use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaNotFound;
 use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaValidationFailed;
 
-final class DataValidator
+final class DataValidator implements DataValidatorInterface
 {
     /**
      * @var Validator
