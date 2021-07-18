@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1626646055">
-  <project timestamp="1626646055">
+<coverage generated="1626647388">
+  <project timestamp="1626647388">
     <file name="/home/runner/work/shooglypeg-datavalidator/shooglypeg-datavalidator/src/Domain/Config.php">
       <class name="ShooglyPeg\DataValidator\Domain\Config" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="9" coveredelements="9"/>
@@ -14,6 +14,9 @@
       <line num="35" type="method" name="getAdapter" visibility="public" complexity="1" crap="1" count="4"/>
       <line num="37" type="stmt" count="4"/>
       <metrics loc="39" ncloc="27" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="9" coveredelements="9"/>
+    </file>
+    <file name="/home/runner/work/shooglypeg-datavalidator/shooglypeg-datavalidator/src/Domain/DataValidator.php">
+      <metrics loc="14" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <file name="/home/runner/work/shooglypeg-datavalidator/shooglypeg-datavalidator/src/Domain/Exceptions/JsonDataInvalid.php">
       <class name="ShooglyPeg\DataValidator\Domain\Exceptions\JsonDataInvalid" namespace="global">
@@ -55,6 +58,6 @@
       <line num="26" type="stmt" count="1"/>
       <metrics loc="28" ncloc="21" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
     </file>
-    <metrics files="5" loc="131" ncloc="97" classes="4" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="25" coveredelements="25"/>
+    <metrics files="6" loc="145" ncloc="105" classes="4" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="25" coveredelements="25"/>
   </project>
 </coverage>
