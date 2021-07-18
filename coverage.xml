@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1626642775">
+  <project timestamp="1626642775">
+    <file name="/home/runner/work/shooglypeg-datavalidator/shooglypeg-datavalidator/src/Domain/Exceptions/JsonDataInvalid.php">
+      <class name="ShooglyPeg\DataValidator\Domain\Exceptions\JsonDataInvalid" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+      </class>
+      <line num="14" type="method" name="__construct" visibility="private" complexity="1" crap="1" count="1"/>
+      <line num="16" type="stmt" count="1"/>
+      <line num="17" type="stmt" count="1"/>
+      <line num="23" type="method" name="fromError" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <metrics loc="27" ncloc="20" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+    </file>
+    <file name="/home/runner/work/shooglypeg-datavalidator/shooglypeg-datavalidator/src/Domain/Exceptions/JsonSchemaException.php">
+      <class name="ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaException" namespace="global">
+        <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </class>
+      <metrics loc="10" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/home/runner/work/shooglypeg-datavalidator/shooglypeg-datavalidator/src/Domain/Exceptions/JsonSchemaNotFound.php">
+      <class name="ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaNotFound" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+      </class>
+      <line num="14" type="method" name="__construct" visibility="private" complexity="1" crap="1" count="1"/>
+      <line num="16" type="stmt" count="1"/>
+      <line num="17" type="stmt" count="1"/>
+      <line num="23" type="method" name="fromSchema" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <metrics loc="27" ncloc="20" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+    </file>
+    <file name="/home/runner/work/shooglypeg-datavalidator/shooglypeg-datavalidator/src/Domain/Exceptions/JsonSchemaValidationFailed.php">
+      <class name="ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaValidationFailed" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+      </class>
+      <line num="14" type="method" name="__construct" visibility="private" complexity="1" crap="1" count="1"/>
+      <line num="16" type="stmt" count="1"/>
+      <line num="17" type="stmt" count="1"/>
+      <line num="23" type="method" name="fromErrors" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <metrics loc="28" ncloc="21" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+    </file>
+    <metrics files="4" loc="92" ncloc="70" classes="3" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="16" coveredelements="16"/>
+  </project>
+</coverage>
