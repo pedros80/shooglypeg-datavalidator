@@ -2,7 +2,7 @@
     "name": "shooglypeg/datavalidator",
     "description": "Validate incoming data using json schema",
     "keywords": [],
-    "homepage": "https://github.com/pedros80/ShooglyPeg-Date",
+    "homepage": "https://github.com/pedros80/ShooglyPeg-DataValidator",
     "license": "MIT",
     "authors": [
         {
