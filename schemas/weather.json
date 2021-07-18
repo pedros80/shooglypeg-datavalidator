@@ -1,0 +1,77 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://www.shooglypeg.co.uk/weather.json",
+    "title": "Tomorrow.io data",
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "object",
+            "properties": {
+                "timelines": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "timestep": {
+                                "type": "string"
+                            },
+                            "startTime": {
+                                "type": "string"
+                            },
+                            "endTime": {
+                                "type": "string"
+                            },
+                            "intervals": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "startTime": {
+                                            "type": "string"
+                                        },
+                                        "values": {
+                                            "type": "object",
+                                            "properties": {
+                                                "weatherCode": {
+                                                    "type": "integer"
+                                                },
+                                                "temperature": {
+                                                    "type": "number"
+                                                }
+                                            },
+                                            "required": [
+                                                "weatherCode",
+                                                "temperature"
+                                            ],
+                                            "additionalProperties": false
+                                        }
+                                    },
+                                    "required": [
+                                        "startTime",
+                                        "values"
+                                    ],
+                                    "additionalProperties": false
+                                }
+                            }
+                        },
+                        "required": [
+                            "timestep",
+                            "startTime",
+                            "endTime",
+                            "intervals"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            },
+            "required": [
+                "timelines"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "data"
+    ],
+    "additionalProperties": false
+}
