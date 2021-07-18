@@ -3,9 +3,6 @@
 namespace ShooglyPeg\DataValidator\Tests;
 
 use League\Flysystem\Adapter\Local;
-use League\Flysystem\Filesystem;
-use Opis\JsonSchema\Errors\ErrorFormatter;
-use Opis\JsonSchema\Validator;
 use PHPUnit\Framework\TestCase;
 use ShooglyPeg\DataValidator\DataValidator;
 use ShooglyPeg\DataValidator\Domain\Config;
