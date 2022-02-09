@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ShooglyPeg\DataValidator\Domain\Exceptions;
+namespace ShooglyPeg\DataValidator\Exceptions;
 
-use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaException;
+use ShooglyPeg\DataValidator\Exceptions\JsonSchemaException;
 
 final class JsonSchemaValidationFailed extends JsonSchemaException
 {

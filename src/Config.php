@@ -1,6 +1,6 @@
 <?php
 
-namespace ShooglyPeg\DataValidator\Domain;
+namespace ShooglyPeg\DataValidator;
 
 use League\Flysystem\AdapterInterface;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ShooglyPeg\DataValidator\Domain\Exceptions;
+namespace ShooglyPeg\DataValidator\Exceptions;
 
 use Exception;
 

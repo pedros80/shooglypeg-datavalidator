@@ -5,11 +5,11 @@ namespace ShooglyPeg\DataValidator;
 use League\Flysystem\Filesystem;
 use Opis\JsonSchema\Errors\ErrorFormatter;
 use Opis\JsonSchema\Validator;
-use ShooglyPeg\DataValidator\Domain\Config;
-use ShooglyPeg\DataValidator\Domain\DataValidator as DataValidatorInterface;
-use ShooglyPeg\DataValidator\Domain\Exceptions\JsonDataInvalid;
-use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaNotFound;
-use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaValidationFailed;
+use ShooglyPeg\DataValidator\Config;
+use ShooglyPeg\DataValidator\Interfaces\DataValidator as DataValidatorInterface;
+use ShooglyPeg\DataValidator\Exceptions\JsonDataInvalid;
+use ShooglyPeg\DataValidator\Exceptions\JsonSchemaNotFound;
+use ShooglyPeg\DataValidator\Exceptions\JsonSchemaValidationFailed;
 
 final class DataValidator implements DataValidatorInterface
 {

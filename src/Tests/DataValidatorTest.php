@@ -5,10 +5,10 @@ namespace ShooglyPeg\DataValidator\Tests;
 use League\Flysystem\Adapter\Local;
 use PHPUnit\Framework\TestCase;
 use ShooglyPeg\DataValidator\DataValidator;
-use ShooglyPeg\DataValidator\Domain\Config;
-use ShooglyPeg\DataValidator\Domain\Exceptions\JsonDataInvalid;
-use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaNotFound;
-use ShooglyPeg\DataValidator\Domain\Exceptions\JsonSchemaValidationFailed;
+use ShooglyPeg\DataValidator\Config;
+use ShooglyPeg\DataValidator\Exceptions\JsonDataInvalid;
+use ShooglyPeg\DataValidator\Exceptions\JsonSchemaNotFound;
+use ShooglyPeg\DataValidator\Exceptions\JsonSchemaValidationFailed;
 
 final class DataValidatorTest extends TestCase
 {
