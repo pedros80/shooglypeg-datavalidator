@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1626647388">
-  <project timestamp="1626647388">
+<coverage generated="1626650207">
+  <project timestamp="1626650207">
     <file name="/home/runner/work/shooglypeg-datavalidator/shooglypeg-datavalidator/src/Domain/Config.php">
       <class name="ShooglyPeg\DataValidator\Domain\Config" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="9" coveredelements="9"/>
