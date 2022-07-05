@@ -8,18 +8,11 @@ use ShooglyPeg\DataValidator\Exceptions\JsonSchemaException;
 
 final class JsonSchemaValidationFailed extends JsonSchemaException
 {
-    /**
-     * @param string $message
-     */
     private function __construct(string $message)
     {
         parent::__construct($message, 400);
     }
 
-    /**
-     * @param array $errors
-     * @return JsonSchemaValidationFailed
-     */
     public static function fromErrors(array $errors): JsonSchemaValidationFailed
     {
         $errors = implode(', ', $errors);

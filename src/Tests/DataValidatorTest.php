@@ -2,7 +2,7 @@
 
 namespace ShooglyPeg\DataValidator\Tests;
 
-use League\Flysystem\Adapter\Local;
+use League\Flysystem\Local\LocalFilesystemAdapter;
 use PHPUnit\Framework\TestCase;
 use ShooglyPeg\DataValidator\DataValidator;
 use ShooglyPeg\DataValidator\Config;
@@ -26,7 +26,7 @@ final class DataValidatorTest extends TestCase
         $this->dataValidator = new DataValidator(new Config([
             'schemas' => 'schemas',
             'prefix'  => 'http://www.shooglypeg.co.uk/',
-            'adapter' => new Local('./schemas')
+            'adapter' => new LocalFilesystemAdapter('./schemas')
         ]));
     }
 

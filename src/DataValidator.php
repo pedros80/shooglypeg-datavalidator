@@ -3,6 +3,7 @@
 namespace ShooglyPeg\DataValidator;
 
 use League\Flysystem\Filesystem;
+use League\Flysystem\StorageAttributes;
 use Opis\JsonSchema\Errors\ErrorFormatter;
 use Opis\JsonSchema\Validator;
 use ShooglyPeg\DataValidator\Config;
@@ -13,28 +14,14 @@ use ShooglyPeg\DataValidator\Exceptions\JsonSchemaValidationFailed;
 
 final class DataValidator implements DataValidatorInterface
 {
-    /**
-     * @var Validator
-     */
     private Validator $validator;
-
-    /**
-     * @var ErrorFormatter
-     */
     private ErrorFormatter $errorFormatter;
-
-    /**
-     * @var Filesystem
-     */
     private Filesystem $filesystem;
 
-    /**
-     * @param Config $config
-     */
     public function __construct(Config $config)
     {
         $this->filesystem = new Filesystem($config->getAdapter());
-        $this->validator = new Validator();
+        $this->validator  = new Validator();
         $this->validator->resolver()->registerPrefix(
             $config->getPrefix(),
             $config->getSchemas()
@@ -43,9 +30,6 @@ final class DataValidator implements DataValidatorInterface
     }
 
     /**
-     * @param string $data
-     * @param string $schema
-     * @return bool
      * @throws JsonSchemaValidationFailed
      */
     public function validate(string $data, string $schema): bool
@@ -66,11 +50,6 @@ final class DataValidator implements DataValidatorInterface
         return true;
     }
 
-    /**
-     * @param string $data
-     * @return object
-     * @throws JsonDataInvalid
-     */
     private function decodeData(string $data): object
     {
         $json = json_decode($data);
@@ -82,16 +61,12 @@ final class DataValidator implements DataValidatorInterface
         return $json;
     }
 
-    /**
-     * @param string $schema
-     * @return bool
-     * @throws JsonSchemaNotFound
-     */
     private function schemaExists(string $schema): bool
     {
-        $found = array_filter($this->filesystem->listContents(), function ($file) use ($schema) {
-            return $file['path'] === "{$schema}.json";
-        });
+        $found = $this->filesystem
+                    ->listContents('')
+                    ->filter(fn (StorageAttributes $attributes) => $attributes->isFile() && $attributes->path() === "{$schema}.json")
+                    ->toArray();
 
         if (!$found) {
             throw JsonSchemaNotFound::fromSchema($schema);
@@ -100,10 +75,6 @@ final class DataValidator implements DataValidatorInterface
         return (bool) $found;
     }
 
-    /**
-     * @param string $schema
-     * @return string
-     */
     private function getSchemaUrl(string $schema): string
     {
         return "http://www.shooglypeg.co.uk/{$schema}.json";
