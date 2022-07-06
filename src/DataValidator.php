@@ -17,6 +17,7 @@ final class DataValidator implements DataValidatorInterface
     private Validator $validator;
     private ErrorFormatter $errorFormatter;
     private Filesystem $filesystem;
+    private string $prefix;
 
     public function __construct(Config $config)
     {
@@ -27,6 +28,7 @@ final class DataValidator implements DataValidatorInterface
             $config->getSchemas()
         );
         $this->errorFormatter = new ErrorFormatter();
+        $this->prefix         = $config->getPrefix();
     }
 
     /**
@@ -77,6 +79,6 @@ final class DataValidator implements DataValidatorInterface
 
     private function getSchemaUrl(string $schema): string
     {
-        return "http://www.shooglypeg.co.uk/{$schema}.json";
+        return "{$this->prefix}/{$schema}.json";
     }
 }
